@@ -1,15 +1,19 @@
 package com.techprimers.aws;
 
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RequestMapping("/hello")
 @RestController
 public class HelloController {
 
-    @GetMapping
+    @GetMapping("hello")
     public String hello() {
-        return "Hello TechPrimers";
+        return "Hello Pradeep";
+    }
+    
+    @PostMapping("welcome")
+    public String welcome() {
+        return "Welcome to AWS CICD Pradeep...";
     }
 }
